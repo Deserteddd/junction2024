@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ApiRequest from './ApiRequest'
+import Swr from './Swr'
 import Card from './components/card'
 
 function App() {
@@ -8,6 +10,8 @@ function App() {
     <>
       <p>Hei mulkero</p>
       <Card info={{ title: 'Title', description: 'Description' }} />
+      <ApiRequest />
+      <Swr />
     </>
   )
 }
