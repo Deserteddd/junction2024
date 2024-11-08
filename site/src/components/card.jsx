@@ -1,9 +1,15 @@
 import React from 'react';
 import TinderCard from 'react-tinder-card';
+import './card.css';
 
-const Card = ({ info }) => {
+const Card = ({ info, index }) => {
+    console.log(info.name.fi);
     const onSwipe = (direction) => {
         console.log('You swiped: ' + direction);
+        if (direction == 'right') {
+            console.log('You liked: ' + info.name.fi);
+            window.open(info.url.fi, '_blank');
+        }
     };
 
     const onCardLeftScreen = (myIdentifier) => {
@@ -14,22 +20,13 @@ const Card = ({ info }) => {
         <TinderCard
             onSwipe={onSwipe}
             onCardLeftScreen={() => onCardLeftScreen('fooBar')}
+            preventSwipe={['up', 'down']}
         >
             <div
-                style={{
-                    width: '300px',
-                    height: '400px',
-                    backgroundColor: '#fff',
-                    borderRadius: '10px',
-                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    flexDirection: 'column',
-                }}
+                className="card"
+                style={{ zIndex: index }}
             >
-                <h2>{info.title}</h2>
-                <p>{info.description}</p>
+                <h2>{info.name.fi}</h2>
             </div>
         </TinderCard>
     );
