@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <p>Hei mulkero</p>
+      <p>Insert bad to bone riff here :-D</p>
     </>
   )
 }
