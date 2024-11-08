@@ -9,6 +9,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.1"
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "node-fetch": "^3.3.2",
+    "react-spring": "^9.7.4",
+    "react-tinder-card": "^1.6.4"
   }
 }
