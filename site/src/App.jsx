@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
 import CardContainer from './components/card_container';
+import Comments from './components/comments';
 
 function App() {
   const [cards, setCards] = useState([]);
   const [error, setError] = useState(null);
+  const [clicked, setClicked] = useState(false);
+  const [hasSwiped, setHasSwiped] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:3000/api/data')
@@ -22,10 +25,31 @@ function App() {
       });
   }, []);
 
+  const onSwipe = (direction, cardInfo) => {
+    console.log('You swiped: ' + direction);
+    if (direction === 'right') {
+      console.log('You liked: ' + cardInfo.name.fi);
+      window.open(cardInfo.url.fi, '_blank');
+    }
+
+    setHasSwiped(true);
+    };
+
+    useEffect(() => {
+      if (hasSwiped) {
+        setHasSwiped(false);
+      }
+    }, [hasSwiped]);
+
+  
+
   return (
     <>
       <div>
-        <CardContainer cards = {cards}/>
+        <CardContainer onSwipe={onSwipe} cards = {cards} clicked = {clicked} setClicked = {setClicked}/>
+      </div>
+      <div>
+        <Comments clicked={clicked} hasSwiped={hasSwiped}/>
         <h1>CivSwipe</h1>
       </div>
     </>
