@@ -98,3 +98,36 @@ button {
       background-position: 0% 50%;
   }
 }
+
+.comments-container {
+  width: 100%;
+  
+}
+
+.comments-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+.comments {
+  background-color: #fd864b;
+  border-radius: 30px;
+}
+
+.comment-item {
+  padding: 10px;
+}
+
+.comment-item:nth-child(odd) {
+  background-color: #f77635;
+}
+
+.comment-item:nth-child(even) {
+  background-color: #f37f46;
+}
+
+
+
+

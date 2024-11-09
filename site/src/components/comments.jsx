@@ -35,12 +35,14 @@ function Comment({clicked, submittedTexts, setSubmittedTexts}) {
       </form>
 
 
-      <div>
+      <div className="comments-container">
+        
+        <ul className="comments-list">
         {submittedTexts.map((text, index) => (
-        <ul>
-          <p key={index}>{text}</p>
-        </ul>
+          <li key={index} className="comment-item">{text}</li>
         ))}
+        </ul>
+        
       </div>
     
     </div>
