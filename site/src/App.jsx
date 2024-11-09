@@ -50,6 +50,7 @@ function App() {
       </div>
       <div>
         <Comments clicked={clicked} hasSwiped={hasSwiped}/>
+        <h1>CivSwipe</h1>
       </div>
     </>
   )
