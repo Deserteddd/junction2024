@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import CardContainer from './components/card_container';
 import Comments from './components/comments';
 import './App.css'
-import aloitteetData from './public/aloitteet.json';
+import aloitteetData from '/public/aloitteet.json';
 
 function App() {
   const [cards, setCards] = useState([]);
