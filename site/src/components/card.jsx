@@ -4,6 +4,13 @@ import './card.css';
 
 const Card = ({ info, index }) => {
     const [clicked, setClicked] = useState(false);
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = date.getFullYear();
+        return `${day}.${month}.${year}`;
+    };
 
     const onSwipe = (direction) => {
         console.log('You swiped: ' + direction);
@@ -35,8 +42,8 @@ const Card = ({ info, index }) => {
                 <h2>{info.name.fi}</h2>
                 {clicked && (
                     <div className="card-info">
-                        <p>{info.endDate}</p>
-                        <p>Hei</p>
+                        <p>Keräys käynnissä {formatDate(info.endDate)} asti</p>
+                        <p>{info.totalSupportCount} / 50000 allekirjoitusta</p>
                     </div>
                 )}
             </div>
