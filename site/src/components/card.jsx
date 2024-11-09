@@ -48,6 +48,7 @@ const Card = ({ info, index, clicked, setClicked, resetComments }) => {
                     backgroundPosition: 'center'
                 }}
                 onClick={handleClick}
+                onTouchEnd={handleClick}
             >
                 {clicked && (
                     <div className='card-info-background'>
