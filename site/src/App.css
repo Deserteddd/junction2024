@@ -16,7 +16,10 @@ body {
   display: flex;
   width: 400px;
   height: 500px;
-
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */ 
 }
 
 .bodyContainer {
@@ -123,10 +126,15 @@ button {
   border-radius: 0px 0px 30px 30px;
   height: 500px;
   overflow-y: auto;
+  
 }
 
 .comment-item {
   padding: 10px;
+  margin: 10px 0px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .comment-item:nth-child(odd) {
@@ -135,6 +143,15 @@ button {
 
 .comment-item:nth-child(even) {
   background-color: #f37f46;
+}
+
+.comment-time {
+  position: absolute;
+  bottom: 10px;
+  left: 220px;
+  margin: 0;
+  color: #af3a00;
+  font-size: 15px;
 }
 
 

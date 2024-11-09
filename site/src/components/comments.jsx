@@ -16,10 +16,15 @@ function Comment({clicked, submittedTexts, setSubmittedTexts}) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (inputValue.trim() !== '') {
-      setSubmittedTexts((prevTexts) => [...prevTexts, inputValue]); // Add the input value to the list
+      const date = new Date().toLocaleTimeString();
+      setSubmittedTexts((prevTexts) => [{text: inputValue, time: date}, ...prevTexts]); // Add the input value to the list
       setInputValue('');
+      
+      console.log(date)
     }
   };
+
+  
 
   if (clicked) {
   return (
@@ -38,8 +43,12 @@ function Comment({clicked, submittedTexts, setSubmittedTexts}) {
       <div className="comments-container">
         
         <ul className="comments-list">
-        {submittedTexts.map((text, index) => (
-          <li key={index} className="comment-item">{text}</li>
+        {submittedTexts.map((comment, index) => (
+          <li key={index} className="comment-item">
+            <p>{comment.text}</p>
+            <span className="comment-time">{comment.time}</span>
+          </li>
+
         ))}
         </ul>
         
