@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import CardContainer from './components/card_container';
 import Comments from './components/comments';
 import './App.css'
-import aloitteetData from './assets/aloitteet.json';
+import aloitteetData from './public/aloitteet.json';
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className = 'Main'>
       <div className = 'header'>
-        <img src="./src/assets/logo.png" alt="" />
+        <img src="./public/logo.png" alt="" />
       </div>
       <div className = 'bodyContainer'>
         <div className = 'cardPile'>
