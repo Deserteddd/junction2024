@@ -26,7 +26,7 @@ function App() {
   return (
     <div className = 'Main'>
       <div className = 'header'>
-        <img src="/public/logo.png" alt="" />
+        <img src="https://junction2024-zeta.vercel.app//logo.png" alt="" />
       </div>
       <div className = 'bodyContainer'>
         <div className = 'cardPile'>

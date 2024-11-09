@@ -11,7 +11,7 @@ const Card = ({ info, index, clicked, setClicked, resetComments }) => {
         return `${day}.${month}.${year}`;
     };
 
-    const imagePath = `/public/images/${info.name.fi.split(/[\s/]/)[0]}.jpg`;
+    const imagePath = `https://junction2024-zeta.vercel.app/images/${info.name.fi.split(/[\s/]/)[0]}.jpg`;
 
     const onSwipe = (direction) => {
         console.log('You swiped: ' + direction);
