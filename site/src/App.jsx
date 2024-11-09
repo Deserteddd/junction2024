@@ -31,13 +31,21 @@ function App() {
   }, []);
 
   return (
-    <div className = 'bodyContainer'>
-      <div className = 'cardPile'>
-         <CardContainer resetComments={resetComments} clicked={clicked} setClicked={setClicked} cards = {cards}/>
+    <div className = 'Main'>
+      <div className = 'header'>
+        <img src="./src/assets/logo.png" alt="" />
       </div>
-      <div className = 'comments'>
-        <Comments setSubmittedTexts={setSubmittedTexts} submittedTexts={submittedTexts} clicked={clicked}/>
-      </div>
+      <div className = 'bodyContainer'>
+        <div className = 'cardPile'>
+          <CardContainer resetComments={resetComments} clicked={clicked} setClicked={setClicked} cards = {cards}/>
+        </div>
+        <div className = 'comments'>
+          <Comments setSubmittedTexts={setSubmittedTexts} submittedTexts={submittedTexts} clicked={clicked}/>
+        </div>
+
+    </div>
+    
+
     </div>
   )
 }

@@ -11,4 +11,33 @@ body {
   display: flex;
   width: 400px;
   height: 500px;
+
+}
+
+.bodyContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-self: center;
+}
+
+.comments {
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
