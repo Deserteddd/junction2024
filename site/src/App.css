@@ -36,11 +36,12 @@ body {
   justify-self: center;
 }
 
-.comments {
+.comments form  {
   animation-duration: 0.5s;
-  animation-name: animate-fade;
+  animation-name: animate-fade2;
   animation-delay: 0.1s;
   animation-fill-mode: backwards;
+  opacity: 1;
 }
 
 input {
@@ -83,6 +84,11 @@ button {
 }
 
 @keyframes animate-fade {
+  0% { opacity: 0; }
+  100% { opacity: 0.8; }
+}
+
+@keyframes animate-fade2 {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
