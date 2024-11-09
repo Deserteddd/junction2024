@@ -38,7 +38,7 @@ function Comment({clicked, submittedTexts, setSubmittedTexts}) {
       <div>
         {submittedTexts.map((text, index) => (
         <ul>
-          <li key={index}>{text}</li>
+          <p key={index}>{text}</p>
         </ul>
         ))}
       </div>
