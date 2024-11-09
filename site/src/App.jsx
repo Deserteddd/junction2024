@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import CardContainer from './components/card_container';
+import './App.css'
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -23,12 +24,11 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div>
+    <div className = 'bodyContainer'>
+      <div className = 'cardPile'>
         <CardContainer cards = {cards}/>
-        <h1>CivSwipe</h1>
       </div>
-    </>
+    </div>
   )
 }
 

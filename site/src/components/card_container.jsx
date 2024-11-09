@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Card from './card';
-import './card_container.css';
 
 const CardContainer = ({ cards }) => {
 
