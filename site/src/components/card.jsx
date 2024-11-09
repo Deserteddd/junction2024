@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import TinderCard from 'react-tinder-card';
 import './card.css';
 
-const Card = ({ info, index }) => {
-    const [clicked, setClicked] = useState(false);
+const Card = ({ info, index, clicked, setClicked, resetComments }) => {
     const formatDate = (dateString) => {
         const date = new Date(dateString);
         const day = String(date.getDate()).padStart(2, '0');
@@ -13,9 +12,10 @@ const Card = ({ info, index }) => {
     };
 
     const imagePath = `/src/assets/images/${info.name.fi.split(/[\s/]/)[0]}.jpg`;
-    console.log(imagePath);
+
     const onSwipe = (direction) => {
         console.log('You swiped: ' + direction);
+        resetComments();
         if (direction === 'right') {
             console.log('You liked: ' + info.name.fi);
             window.open(info.url.fi, '_blank');
@@ -28,6 +28,7 @@ const Card = ({ info, index }) => {
 
     const handleClick = () => {
         setClicked(!clicked);
+        console.log(clicked)
     };
 
     return (

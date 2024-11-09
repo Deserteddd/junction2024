@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Card from './card';
 import './card_container.css';
 
-const CardContainer = ({ cards }) => {
+const CardContainer = ({ cards, clicked, setClicked, resetComments }) => {
 
     const card_elements = cards.map((card, index) => (
-        <Card key={index} info={card} index={cards.length - index} />
+        <Card resetComments={resetComments} clicked={clicked} setClicked={setClicked} key={index} info={card} index={cards.length - index} />
     ));
 
     return (
