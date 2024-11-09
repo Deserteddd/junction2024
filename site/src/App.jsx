@@ -26,6 +26,7 @@ function App() {
     <>
       <div>
         <CardContainer cards = {cards}/>
+        <h1>CivSwipe</h1>
       </div>
     </>
   )
