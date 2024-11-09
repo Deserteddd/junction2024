@@ -16,6 +16,7 @@ const Card = ({ info, index, clicked, setClicked, resetComments }) => {
     const onSwipe = (direction) => {
         console.log('You swiped: ' + direction);
         resetComments();
+        setClicked(true);
         if (direction === 'right') {
             console.log('You liked: ' + info.name.fi);
             window.open(info.url.fi, '_blank');
