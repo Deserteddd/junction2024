@@ -31,7 +31,7 @@ function Comment({clicked, submittedTexts, setSubmittedTexts}) {
           onChange={handleInputChange}
           placeholder="comment here"
         />
-        <button type="submit">Submit</button>
+        <button type="submit">post</button>
       </form>
 
 
