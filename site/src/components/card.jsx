@@ -53,6 +53,7 @@ const Card = ({ info, index, clicked, setClicked, resetComments }) => {
                             <h2>{info.name.fi}</h2>
                             <p>Keräys käynnissä {formatDate(info.endDate)} asti</p>
                             <p>{info.totalSupportCount} / 50000 allekirjoitusta</p>
+                            <progress value ={info.totalSupportCount/50000} />
                         </div>
                     </div>
                 )}
