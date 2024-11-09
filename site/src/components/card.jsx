@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TinderCard from 'react-tinder-card';
 import './card.css';
+import ProgressBar from "@ramonak/react-progress-bar";
 
 const Card = ({ info, index, clicked, setClicked, resetComments }) => {
     const formatDate = (dateString) => {
@@ -54,7 +55,7 @@ const Card = ({ info, index, clicked, setClicked, resetComments }) => {
                             <h2>{info.name.fi}</h2>
                             <p>Keräys käynnissä {formatDate(info.endDate)} asti</p>
                             <p>{info.totalSupportCount} / 50000 allekirjoitusta</p>
-                            <progress value ={info.totalSupportCount/50000} />
+                            <ProgressBar completed={info.totalSupportCount/500} customLabel=' '/>
                         </div>
                     </div>
                 )}
