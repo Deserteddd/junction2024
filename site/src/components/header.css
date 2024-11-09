@@ -1,0 +1,18 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app-header {
+    text-align: center;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    z-index: 1000; 
+}
+
+.app-header h1 {
+    margin: 2;
+    font-size: 72px;
+}
