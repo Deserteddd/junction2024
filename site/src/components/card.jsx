@@ -35,8 +35,8 @@ const Card = ({ info, index }) => {
                 <h2>{info.name.fi}</h2>
                 {clicked && (
                     <div className="card-info">
-                        <p>{info.description}</p>
                         <p>{info.endDate}</p>
+                        <p>Hei</p>
                     </div>
                 )}
             </div>
