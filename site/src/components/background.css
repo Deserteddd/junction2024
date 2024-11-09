@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(180deg, #ff5a08, #fcc7b1);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
