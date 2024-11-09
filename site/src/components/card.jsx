@@ -46,11 +46,13 @@ const Card = ({ info, index }) => {
                 }}
                 onClick={handleClick}
             >
-                <h2>{info.name.fi}</h2>
                 {clicked && (
-                    <div className="card-info">
-                        <p>Keräys käynnissä {formatDate(info.endDate)} asti</p>
-                        <p>{info.totalSupportCount} / 50000 allekirjoitusta</p>
+                    <div className='card-info-background'>
+                        <div className="card-info">
+                            <h2>{info.name.fi}</h2>
+                            <p>Keräys käynnissä {formatDate(info.endDate)} asti</p>
+                            <p>{info.totalSupportCount} / 50000 allekirjoitusta</p>
+                        </div>
                     </div>
                 )}
             </div>
