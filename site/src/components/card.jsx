@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TinderCard from 'react-tinder-card';
 import './card.css';
 
-const Card = ({ info, index }) => {
-    const [clicked, setClicked] = useState(false);
+const Card = ({ info, index, clicked, setClicked, onSwipe }) => {
 
-    const onSwipe = (direction) => {
-        console.log('You swiped: ' + direction);
+    const handleSwipe = (direction) => {
+        onSwipe(direction, info);
+
         if (direction === 'right') {
-            console.log('You liked: ' + info.name.fi);
             window.open(info.url.fi, '_blank');
-        }
-    };
+          }
+        };
 
     const onCardLeftScreen = (myIdentifier) => {
         console.log(myIdentifier + ' left the screen');
@@ -19,11 +18,16 @@ const Card = ({ info, index }) => {
 
     const handleClick = () => {
         setClicked(!clicked);
+        console.log(clicked)
+        
     };
 
+    
+
     return (
+        
         <TinderCard
-            onSwipe={onSwipe}
+            onSwipe={handleSwipe}
             onCardLeftScreen={() => onCardLeftScreen('fooBar')}
             preventSwipe={['up', 'down']}
         >
