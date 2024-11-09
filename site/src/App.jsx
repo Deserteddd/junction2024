@@ -13,6 +13,8 @@ function App() {
     setSubmittedTexts([]);
   }
 
+  const unClick = () => { setClicked(false) }
+
   useEffect(() => {
     fetch('http://localhost:3000/api/data')
       .then(response => {
