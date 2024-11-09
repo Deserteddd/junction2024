@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import CardContainer from './components/card_container';
 import Comments from './components/comments';
 import './App.css'
+import aloitteetData from './assets/aloitteet.json';
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -13,23 +14,13 @@ function App() {
     setSubmittedTexts([]);
   }
 
-  const unClick = () => { setClicked(false) }
-
   useEffect(() => {
-    fetch('http://localhost:3000/api/data')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setCards(data);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-        setError(error.message);
-      });
+    try {
+      setCards(aloitteetData);
+    } catch (error) {
+      console.error('Error reading data:', error);
+      setError(error.message);
+    }
   }, []);
 
   return (
