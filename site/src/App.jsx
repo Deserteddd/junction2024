@@ -26,7 +26,7 @@ function App() {
   return (
     <div className = 'Main'>
       <div className = 'header'>
-        <img src="./public/logo.png" alt="" />
+        <img src="/public/logo.png" alt="" />
       </div>
       <div className = 'bodyContainer'>
         <div className = 'cardPile'>
