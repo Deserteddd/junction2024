@@ -12,10 +12,7 @@ function ApiRequest() {
   }, []);
 
   return (
-    <div className="ApiRequest">
-      <h1>React and Express Integration</h1>
-      {data ? console.log(data) : <p>Loading...</p>}
-    </div>
+    <p></p>
   );
 }
 
