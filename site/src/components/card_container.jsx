@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import Card from './card';
 import './card_container.css';
 
-const CardContainer = ({ cards, clicked, setClicked, onSwipe }) => {
+const CardContainer = ({ cards }) => {
 
     const card_elements = cards.map((card, index) => (
-        <Card onSwipe={onSwipe} clicked={clicked} setClicked={setClicked} key={index} info={card} index={cards.length - index} />
-        
+        <Card key={index} info={card} index={cards.length - index} />
     ));
 
     return (
