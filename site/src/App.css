@@ -5,6 +5,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(180deg, #ff5a08, #fcc7b1);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .card-container {
@@ -17,6 +22,7 @@ body {
 .bodyContainer {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -79,4 +85,16 @@ button {
 @keyframes animate-fade {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
