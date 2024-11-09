@@ -11,8 +11,12 @@ function ApiRequest() {
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
+  
+
   return (
-    <p></p>
+    <>
+      {console.log(data)}
+    </>
   );
 }
 
