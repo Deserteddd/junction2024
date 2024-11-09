@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <p><ApiRequest /></p>
+      <ApiRequest />
     </>
   )
 }
