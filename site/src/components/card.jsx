@@ -30,7 +30,7 @@ const Card = ({ info, index, clicked, setClicked, resetComments }) => {
 
     const handleClick = () => {
         setClicked(!clicked);
-        console.log(clicked)
+        console.log(clicked);
     };
 
     return (
@@ -56,7 +56,7 @@ const Card = ({ info, index, clicked, setClicked, resetComments }) => {
                             <h2>{info.name.fi}</h2>
                             <p>Keräys käynnissä {formatDate(info.endDate)} asti</p>
                             <p>{info.totalSupportCount} / 50000 allekirjoitusta</p>
-                            <ProgressBar completed={info.totalSupportCount/500} customLabel=' '/>
+                            <ProgressBar completed={info.totalSupportCount / 500} customLabel=' '/>
                         </div>
                     </div>
                 )}
