@@ -1,7 +1,9 @@
 body {
-    background: linear-gradient(180deg, #f67352, #ffb780);
+    background: linear-gradient(180deg, #ff5f37, #ffb780);
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 @keyframes gradientAnimation {

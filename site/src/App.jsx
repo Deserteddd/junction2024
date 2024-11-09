@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import CardContainer from './components/card_container';
 import Comments from './components/comments';
+import './App.css'
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -30,15 +31,14 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div>
-        <CardContainer resetComments={resetComments} clicked={clicked} setClicked={setClicked} cards = {cards}/>
-        <h1>CivSwipe</h1>
+    <div className = 'bodyContainer'>
+      <div className = 'cardPile'>
+         <CardContainer resetComments={resetComments} clicked={clicked} setClicked={setClicked} cards = {cards}/>
       </div>
-      <div>
+      <div className = 'comments'>
         <Comments setSubmittedTexts={setSubmittedTexts} submittedTexts={submittedTexts} clicked={clicked}/>
       </div>
-    </>
+    </div>
   )
 }
 
