@@ -7,6 +7,7 @@
     width: 400px;
     height: 500px;
     background-color: #fff;
+    color: #fff;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex-direction: column;
@@ -14,7 +15,7 @@
 }
 
 .card-info {
-    background-color: #fff;
+    background-color: black;
     font-size: medium;
     display: flex;
     flex-direction: column;
@@ -23,26 +24,23 @@
 }
 
 .card-info-background {
+    padding: 15px;
     border-radius: 10px;
-    opacity: 1;
-    background-color: #fff;
+    background-color: black;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     width: 300px;
     height: 400px;
- 
+
+    opacity: 0.8;
+
     animation-duration: 0.5s;
     animation-name: animate-fade;
     animation-delay: 0.1s;
     animation-fill-mode: backwards;
+    
 }
-
-@keyframes animate-fade {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
 
   
   
