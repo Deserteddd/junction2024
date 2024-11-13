@@ -1,0 +1,12 @@
+GET http://localhost:5154/initiatives
+
+###
+GET http://localhost:5154/initiatives/5
+
+###
+PUT http://localhost:5154/initiatives/5
+Content-Type: application/json
+
+{
+    "comment" : "Ron-Vitun-Weasly"
+}

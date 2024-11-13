@@ -16,6 +16,7 @@
     "react-dom": "^18.3.1",
     "react-spring": "^9.7.4",
     "react-tinder-card": "^1.6.4",
+    "site": "file:",
     "swr": "^2.2.5"
   },
   "devDependencies": {
