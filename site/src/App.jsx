@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import CardContainer from './components/card_container';
 import Comments from './components/comments';
 import './App.css'
-import aloitteetData from '/public/aloitteet.json';
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -16,7 +15,13 @@ function App() {
 
   useEffect(() => {
     try {
-      setCards(aloitteetData);
+        fetch('http://localhost:5154/initiatives')
+            .then(response => response.json())
+            .then(data => setCards(data))
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                setError(error.message);
+            });
     } catch (error) {
       console.error('Error reading data:', error);
       setError(error.message);

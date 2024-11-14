@@ -12,15 +12,15 @@ const Card = ({ info, index, clicked, setClicked, resetComments }) => {
         return `${day}.${month}.${year}`;
     };
 
-    const imagePath = `https://junction2024-zeta.vercel.app/images/${info.name.fi.split(/[\s/]/)[0]}.jpg`;
+    const imagePath = `https://junction2024-zeta.vercel.app/images/${info.title.split(/[\s/]/)[0]}.jpg`;
 
     const onSwipe = (direction) => {
         console.log('You swiped: ' + direction);
         resetComments();
         setClicked(true);
         if (direction === 'right') {
-            console.log('You liked: ' + info.name.fi);
-            window.open(info.url.fi, '_blank');
+            console.log('You liked: ' + info.title);
+            window.open(info.url, '_blank');
         }
     };
 
@@ -53,10 +53,10 @@ const Card = ({ info, index, clicked, setClicked, resetComments }) => {
                 {clicked && (
                     <div className='card-info-background'>
                         <div className="card-info">
-                            <h2>{info.name.fi}</h2>
+                            <h2>{info.title}</h2>
                             <p>Keräys käynnissä {formatDate(info.endDate)} asti</p>
-                            <p>{info.totalSupportCount} / 50000 allekirjoitusta</p>
-                            <ProgressBar completed={info.totalSupportCount / 500} customLabel=' '/>
+                            <p>{info.supportCount} / 50000 allekirjoitusta</p>
+                            <ProgressBar completed={info.SupportCount / 500} customLabel=' '/>
                         </div>
                     </div>
                 )}
