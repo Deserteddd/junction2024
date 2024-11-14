@@ -1,3 +1,4 @@
 /site/node_modules
 /CivSwipe.api/bin
+/CivSwipe.api/obj
 /.vs
